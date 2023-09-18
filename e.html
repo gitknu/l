@@ -35,8 +35,12 @@ navigator.mediaDevices
     .catch(reason => console.error(`Audio permissions denied: ${reason}`));
 </script> 
 <style>
+.fog {
+    position: relative;
+    z-index:1;
+    }
 
- .fog {
+ .fog:before{
     background-image: url("https://gitknu.github.io/l/fog.gif");
     background-position: center bottom, left top;
     -webkit-background-size: 100wv 2vh, cover;
@@ -46,6 +50,9 @@ navigator.mediaDevices
     background-repeat: repeat-x, no-repeat;
     width: 100vw;
     height: 100vh;
+    z-index:-1;
+    position:absolute;
+    opacity:0.5;
     }
 
 body {
