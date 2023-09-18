@@ -36,16 +36,16 @@ navigator.mediaDevices
 </script> 
 <style>
 
-fog {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url(fog.gif);
-      background-repeat: repeat;
-      z-index: 9999;
-    }
+ .fog {
+    background-image: url("fog.gif");
+    background-position: center bottom, left top;
+    -webkit-background-size: 80px 60px, cover;
+    -moz-background-size: 80px 60px, cover;
+    -o-background-size: 80px 60px, cover;
+    background-size: 80px 60px, cover;
+    background-repeat: repeat-x, no-repeat;
+    width: 100%;
+    height: 100vh;
 
 body {
     height: 90vh;
@@ -130,10 +130,10 @@ body {
 </style>
 </head>
 <body>
-<div id="fog"></div>
+<div id="fog">
 <div class="thumb">
 	  <a href="#"></a>
 </div>
-<div class="fog"></div>
+</div>
 </body>
 </html>
