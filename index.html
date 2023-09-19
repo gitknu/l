@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Сканер 📱</title>
+     <link rel="icon" href="https://gitknu.github.io/b/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+<script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+  </head>
+
+ <div style="position: fixed; top: 10px; width: 100%; text-align: right; z-index: 99999; color: grey">
+        <button class="btn btn-success" onclick="window.open('https://x.com/DefenceU/status/1511675504428044288','_blank')">Натисніть</button>,⠀<br>після<br>перегляду<br>брошури
+    </div>
+  <body>
+
+    <a-scene mindar-image="imageTargetSrc: https://gitknu.github.io/b/b.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+            <img id="banksy_fight" src="https://gitknu.github.io/b/banksy_fight.png" />
+            <img id="banksy_girl" src="https://gitknu.github.io/b/banksy_girl.png" />
+            <img id="cat" src="https://gitknu.github.io/b/circle_cat_transp.png" />
+            <img id="girl_photo" src="https://gitknu.github.io/b/girl_photo.png" />
+            <img id="shafa_2d" src="https://gitknu.github.io/b/shafa_2d.png" />
+            <img id="trymajus" src="https://gitknu.github.io/b/trymajus.png" />
+            <img id="taras" src="https://gitknu.github.io/b/taras.png" />
+        <a-asset-item id="piven" src="https://gitknu.github.io/b/b.glb"></a-asset-item>
+        <a-asset-item id="text"></a-asset-item>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+<a-plane src="#banksy_girl" position="0.06 0.105 0" height="0.475" width="0.475" rotation="0 0 0" transparent="true"></a-plane> <!--yes-->
+      </a-entity>
+<a-entity mindar-image-target="targetIndex: 1">
+<a-plane src="#banksy_fight" position="0.03 -0.04 0" height="0.345" width="0.345" rotation="0 0 0" transparent="true"></a-plane> <!--yes-->
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 2">
+<a-plane src="#cat" position="0.25 -0.35 0" height="1.101" width="1.101" rotation="0 0 0" transparent="true"></a-plane> <!--yes-->
+  </a-entity>
+      <a-entity mindar-image-target="targetIndex: 3">
+<a-plane src="#girl_photo" position="-0.25 0.3 0" height="0.426" width="0.639" rotation="0 0 0" transparent="true"></a-plane> <!--yes-->
+      </a-entity>
+<a-entity mindar-image-target="targetIndex: 4">
+<a-gltf-model src="#piven" rotation="0 180 0" position="-0.23 0.35 0" scale="0.02 0.02 0.02" animation-mixer> <!--yes-->
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 5">
+<a-gltf-model src="#piven" rotation="0 180 0" position="0.3 1.4 0" scale="0.12 0.12 0.12" animation-mixer> <!--yes-->
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 6">
+<a-plane src="#taras" position="0.1 0 0" height="2.966" width="1.482" rotation="0 0 0" transparent="true"></a-plane> <!--yes-->
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 7">
+<a-plane src="#trymajus" position="0.44 -0.9 0" height="1.601" width="1.601" rotation="0 0 0" transparent="true"></a-plane> <!--yes-->
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
+
+
+    
