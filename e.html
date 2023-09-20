@@ -1,5 +1,7 @@
 <html>
 <head>
+  <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+  <link href="https://fonts.googleapis.com/css?family=Caveat&v1" rel="stylesheet">
 <script>
 
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -35,7 +37,6 @@ navigator.mediaDevices
     .catch(reason => console.error(`Audio permissions denied: ${reason}`));
 </script> 
 <style>
-
  .fog {
     background-image: url("https://gitknu.github.io/l/fog.gif");
     background-position: center bottom, left top;
@@ -51,13 +52,12 @@ navigator.mediaDevices
     filter: blur(0px);
     width: 100vw;
     height: 100vh;
-    }
+}
 
 body {
     height: 90vh;
     margin:0;
     overflow: hidden;
-    pointer-events: none;
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
 }
@@ -133,13 +133,61 @@ body {
     transform-origin: bottom;
 }
 
+/* New styles for the button */
+.button {
+    position: absolute;
+    top: 60vh;
+    right: 0vw;
+    transform: translateY(-50%);
+    width: 20vw;
+    height: 100vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button:hover {
+}
+
+.button span {
+    font-size: 7vh;
+    font-weight: bold;
+    opacity: 0.4;
+    transition: opacity 1.5s;
+}
+
+.button:hover span {
+    opacity: 0;
+}
+
+.button:hover::before {
+    content: "СКАНУЙТЕ QR-КОД ЗЛІВА, А ЗА ПОСИЛАННЯМ УСЮ ВЕБ-СТОРІНКУ";
+    text-align: right;
+    text-shadow: 1px 1px 2px black;
+    position: absolute;
+    top: 25%;
+    right: 2vw;
+    transform: translateY(-50%);
+    font-family: 'Caveat', arial, serif;
+    font-size: 7vh;
+    color: #ffdb80;
+}
+
 </style>
 </head>
 <body>
 <div class="fog">
 <div class="thumb">
-	  <a href="#"></a>
+	  <a href="#" style="pointer-events: none;"></a>
 </div>
 </div>
+
+<!-- Add the button element -->
+<div class="button">
+    <span><img src="poster.png"></span>
+</div>
+
 </body>
 </html>
